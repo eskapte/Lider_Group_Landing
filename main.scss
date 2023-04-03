@@ -1,0 +1,77 @@
+// variables
+$space: 8px;
+
+$text-color-light: #FFF;
+$text-color-dark: #24282C;
+
+$main-color-blue: #4C7AA6;
+$main-color-light: #E9F4FF;
+
+$max-container-size: 1400px;
+$min-font-size: 16px;
+
+// mixins
+@mixin adaptive-font($size, $min-size: $min-font-size) {
+    font-size: clamp($min-size, 3.5vw, $size);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: $main-color-light;
+}
+
+body {
+    background-color: $main-color-light;
+}
+
+.container {
+    margin: 0 auto;
+    width: clamp(264px, 90%, $max-container-size);
+    height: 100%;
+
+    @media (orientation: portrait) {
+        width: 100%;
+        padding: clamp($space * 2, 3vw, $space * 3);
+    }
+}
+
+.main-header {
+    width: 100%;
+    height: 80px;
+
+    background-color: $main-color-blue;
+
+    * {
+        white-space: nowrap;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space * 3;
+    }
+
+    &__logo {
+        @include adaptive-font(2.5em, 24px);
+        font-weight: bold;
+        vertical-align: middle;
+    }
+
+    &__contacts {
+        @include adaptive-font(1.5em, 12px);
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5%;
+        width: min(40%, 500px)
+    }
+
+    span {
+        display: block;
+    }
+}
