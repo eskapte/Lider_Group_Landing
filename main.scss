@@ -26,6 +26,10 @@ $minWidth: 280;
     color: $text-color-light;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: $main-color-light;
     overflow-x: hidden;
