@@ -8,7 +8,6 @@ $main-color-blue: #4C7AA6;
 $main-color-light: #E9F4FF;
 
 $max-container-size: 1400px;
-$min-font-size: 16px;
 
 // mixins
 $maxWidth: 1920; 
@@ -29,10 +28,20 @@ $minWidth: 280;
 
 body {
     background-color: $main-color-light;
+    overflow-x: hidden;
+
+    &.menu-displayed {
+        overflow-y: hidden;
+    }
 }
 
 a {
     text-decoration: none;
+    transition: text-shadow .2s ease;
+    
+    &:hover {
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    }
 }
 
 /* width */
@@ -62,14 +71,12 @@ a {
 
     @media (orientation: portrait) {
         width: 100%;
-        padding: clamp($space * 2, 3vw, $space * 3);
+        padding: 0 clamp($space * 2, 3vw, $space * 3);
     }
 }
 
 .main-header {
     width: 100%;
-    height: 5em;
-
     background-color: $main-color-blue;
 
     &__container {
@@ -82,6 +89,7 @@ a {
     &__logo {
         font-weight: bold;
         @include adaptiv-font(18, 40);
+        padding: min(0.7em, 15px) 0;
     }
 
     $hidden-contacts-width: 600px;
@@ -94,6 +102,7 @@ a {
         align-items: center;
         flex-grow: 0.5;
         gap: min(40px, 5%);
+        transition: left 0.3s ease-in-out;
 
         span {
             flex-shrink: 0;
@@ -101,27 +110,51 @@ a {
         }
 
         @media (max-width: $hidden-contacts-width) {
-            display: none;
+            font-size: 24px;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #4c7ba6de;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.show {
+            left: 0;
         }
     }
 
     &__menu-burger {
         display: none;
+        cursor: pointer;
 
         @media (max-width: $hidden-contacts-width) {
             display: block;
             width: 25px;
+            z-index: 10;
         }
     }
 }
 
 .promo {
     width: 100%;
-    height: 90vh;
+    height: min(1080, 84vh);
 
     background-image: url(/Assets/Images/header-image.png);
     background-repeat: no-repeat;
     background-position-y: -80px;
+    background-position-x: center;
+
+    @media (min-width: 1921px) {
+        background-image: url(/Assets/Images/header-image-big.png);
+    }
+
+    @media (orientation: portrait) {
+        background-position-x: -400px;
+    }
 
     &__container {
         display: flex;
@@ -146,35 +179,240 @@ a {
         margin-top: 2.5em;
         display: inline-flex;
         gap: 2vw;
+
         a {
-            @include adaptiv-font(14, 24);
+            @include adaptiv-font(16, 24);
             font-weight: 600;
             background-color: $main-color-blue;
             padding: 0.25em 0.5em;
+            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
             display: inline-flex;
             align-items: center;
-            gap: 1em;
+            gap: 0.5em;
 
-            &.call::before {
-                content: "";
-                height: 1.2em;
-                width: 1.2em;
-                background-image: url(/Assets/Icons/phone.svg);
-                background-repeat: no-repeat;
-                background-position: center;
+            box-shadow: inset 0 0 0 0 $text-color-light;
+
+            // Font-awesome icons
+            i {
+                transition: color .3s ease-in-out;
                 margin-top: 0.1em;
+                @include adaptiv-font(12, 20);
             }
 
-            &.email::before {
-                content: "";
-                height: 1.2em;
-                width: 1.2em;
-                background-image: url(/Assets/Icons/mail.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                margin-top: 0.1em;
+            &:hover {
+                text-shadow: none;
+                box-shadow: inset 200px 0 0 0 $text-color-light;
+                color: $main-color-blue;
+
+                i {
+                    color: $main-color-blue!important;
+                }
             }
         }
+    }
+}
+
+.about-us {
+    background-color: $main-color-blue;
+
+    &__container {
+        background-image: url(/Assets/Icons/builder.png);
+        background-repeat: no-repeat;
+        background-size: 28%;
+        background-position: right;
+
+        @media (max-width: 1000px) {
+            background-image: none;
+        }
+    }
+
+    &__header {
+        font-weight: 600;
+        @include adaptiv-font(28, 48);
+        padding: 0.4em 0;
+
+        @media (orientation: portrait) {
+            padding-top: 0.6em;
+        }
+    }
+
+    p {
+        max-width: 60%;
+        @include adaptiv-font(16, 24);
+        padding-bottom: 1em;
+
+        &:last-child {
+            padding-bottom: 2em;
+        }
+
+        @media (max-width: 1000px) {
+            max-width: 100%;
+        }
+    }
+}
+
+.work-categories {
+
+    &__header {
+        @include adaptiv-font(28, 48);
+        color: $text-color-dark;
+
+        padding-top: 0.4em;
+
+        @media (orientation: portrait) {
+            padding-top: 0.6em;
+        }
+    }
+
+    .category {
+        width: 100%;
+        padding-bottom: 0.5em;
+
+        &__name {
+            @include adaptiv-font(20, 32);
+            padding: 1em 0 0.5em 0;
+            color: $text-color-dark;
+        }
+
+        &__description {
+            @include adaptiv-font(16, 20);
+            color: $text-color-dark;
+        }
+
+        &:nth-child(even) {
+            background-color: $main-color-blue;
+            
+            .category__name {
+                color: $text-color-light;
+            }
+    
+            .category__description {
+                color: $text-color-light;
+            }
+
+            .carousel__button { 
+                background-color: $main-color-light!important;
+                
+                * {
+                    color: $main-color-blue!important; 
+                }
+            }
+            .carousel__dots {
+                * {
+                    color: $main-color-light!important;
+                }
+            }
+        }
+
+        // Fancybox carousel
+        .carousel {
+            height: 320px;
+            width: 100%;
+            padding-top: 1em;
+            
+            &__slide {
+                width: 300px;
+                height: 300px;
+                margin: 0;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+
+                a img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .carousel__button { background-color: $main-color-blue; }
+            .carousel__dots {
+                * {
+                    color: $main-color-blue;
+                }
+            }
+        }
+    }
+}
+
+.contacts {
+    &__header {
+        @include adaptiv-font(28, 48);
+        color: $text-color-dark;
+        text-align: center;
+        padding: 0.4em;
+
+        @media (orientation: portrait) {
+            padding-top: 0.6em;
+        }
+    }
+
+    &__block {
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        max-width: min(800px, 100%);
+        margin: 3em auto;
+
+        @media (orientation: portrait) {
+            margin: 0.5em auto 2em auto;
+            flex-direction: column;
+            width: 70%;
+        }
+    }
+
+    &__column {
+        position: relative;
+        bottom: 40px;
+
+        @media (orientation: portrait) {
+            bottom: -20px;
+            padding-bottom: 40px;
+        }
+
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        i {
+            @include adaptiv-font(30, 50);
+            background-color: $main-color-blue;
+            width: max-content;
+            padding: 0.3em;
+            border-radius: 50%;
+        }
+
+        span, a {
+            color: black;
+            @include adaptiv-font(16, 30)
+        }
+
+        span {
+            padding-top: 0.5em;
+        }
+
+        a {
+            font-weight: bold;
+        }
+    }
+}
+
+.footer {
+    background-color: $main-color-blue;
+    
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        padding: 1em 0;
+        font-weight: bold;
+        @include adaptiv-font(18, 40);
     }
 }

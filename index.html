@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/webp" href="Assets/Icons/logo2.webp" />
   <title>Лидер Групп</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Css/main.min.css">
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
 </head>
 
 <body>
@@ -18,8 +21,8 @@
       <span class="main-header__logo">ООО «Лидер Групп»</span>
       <img src="Assets/Icons/Menu-burger.svg" class="main-header__menu-burger" alt="menu">
       <div class="main-header__contacts">
-        <span class="main-header__phone">+7 (495) 532-07-80</span>
-        <span class="main-header__email">3017380@gmail.com</span>
+        <a class="main-header__phone" href="tel: +74955320780">+7 (495) 532-07-80</a>
+        <a class="main-header__email" href="mailto: 3017380@gmail.com">3017380@gmail.com</a>
       </div>
     </div>
   </header>
@@ -29,12 +32,479 @@
         <h1 class="promo__header">Выполнение работ<br> в сфере ЖКХ</h1>
         <span class="promo__text">Включая капитальные работы<br> многоквартирных домов</span>
         <div class="promo__buttons">
-          <a href="#" class="call">Позвонить</a>
-          <a href="#" class="email">Написать</a>
+          <a href="tel: +74955320780" class="call"><i class="fa-solid fa-phone-volume"
+              style="color: #ffffff;"></i>Позвонить</a>
+          <a href="mailto: 3017380@gmail.com" class="email"><i class="fa-solid fa-envelope"
+              style="color: #ffffff;"></i>Написать</a>
         </div>
       </div>
     </section>
+    <section class="about-us">
+      <div class="about-us__container container">
+        <h2 class="about-us__header">Немного про нас</h2>
+        <p>
+          Мы команда <b>профессиональных и компетентных специалистов</b>, которые
+          знают какие работы требуются для многоквартирных домов.
+        </p>
+        <p>
+          Наши мастера грамотно, а самое главное <b>качественно и в срок</b>
+          выполняют все поставленные перед нами задачи.
+        </p>
+        <p>
+          К каждому нашему заказчику у нас <b>индивидуальный подход</b>.
+        </p>
+      </div>
+    </section>
+    <section class="work-categories">
+      <div class="header-container container">
+        <h2 class="work-categories__header">Наши работы</h2>
+      </div>
+      <section class="categories">
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Электромонтажные работы</h3>
+            <p class="category__description">
+              Выполняем электромонтажные работы любой сложности (переборка приквартирных электрощитов,
+              перетяжка вертикальных стояков электроснабжения, уборка проводов в кабель каналы с монтажом, монтаж
+              освещения).
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/1.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/2.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/3.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/3.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/4.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/5.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/6.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/7.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="1" data-src="./Assets/Photos/Электромонтажные работы/8.jpg">
+                  <img alt="Электромонтажные работы" src="./Assets/Photos/Электромонтажные работы/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Заземление многоквартирных домов</h3>
+            <p class="category__description">
+              Хорошо востребованная услуга, по причине того что в старом жилом фонде заземление попросту отсутствует.
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/1.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/2.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/3.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/Mini/3.JPG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/4.jpeg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/4.jpeg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/5.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/6.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/7.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="2" data-src="./Assets/Photos/Заземление/8.jpg">
+                  <img alt="Заземление многоквартирных домов" src="./Assets/Photos/Заземление/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">ВРУ Электрощитовая дома, двери в щитовую</h3>
+            <p class="category__description">
+              Наша команда профессиональных электриков делает максимально грамотно переборку электрощитовых и оставляет
+              дом
+              с минимальными отключения по времени от электроэнергии. Так же меняем двери в электрощитовой.
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/1.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/Mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/2.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/3.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/Mini/3.JPG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/4.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/5.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/6.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/7.jpg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="3" data-src="./Assets/Photos/Вру и двери в щитовую/8.jpeg">
+                  <img alt="Вру и двери в щитовую" src="./Assets/Photos/Вру и двери в щитовую/mini/8.jpeg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Герметизация, промышленный альпинизм</h3>
+            <p class="category__description">
+              Герметизация меж панельных швов, ремонты по фасаду здания, покраска фасада.
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/1.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/2.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/3.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/Mini/3.JPG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/4.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/5.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/6.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/7.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="4" data-src="./Assets/Photos/Герметизация/8.jpg">
+                  <img alt="Герметизация" src="./Assets/Photos/Герметизация/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Слаботочка</h3>
+            <p class="category__description">
+              Демонтаж не действующих проводов интернета от шкафов провайдеров по чердаку,
+              подвалу, а также по этажам в приквартирных электрощитах.
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/1.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/2.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/3.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/Mini/3.JPG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/4.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/5.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/6.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/7.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="5" data-src="./Assets/Photos/Слаботочка/8.jpg">
+                  <img alt="Слаботочка" src="./Assets/Photos/Слаботочка/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Металлоконструкции</h3>
+            <p class="category__description">
+              Выполнение любых металлоконструкция (подъездные входные и этажные двери, решётки и навесы в подвалы,
+              пожарные шкафы).
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/1.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/2.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/3.jpeg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/Mini/3.JPeG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/4.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/5.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/6.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/7.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="6" data-src="./Assets/Photos/Металлоконструкции/8.jpg">
+                  <img alt="Металлоконструкции" src="./Assets/Photos/Металлоконструкции/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Ремонтные работы</h3>
+            <p class="category__description">
+              Профессиональный ремонт подъездной группы, этажных холлов, лестницы этажной, отмостка.
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/1.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/2.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/3.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/Mini/3.JPG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/4.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/5.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/6.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/7.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="7" data-src="./Assets/Photos/Ремонтные работы/8.jpg">
+                  <img alt="Ремонтные работы" src="./Assets/Photos/Ремонтные работы/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="category">
+          <div class="category__container container">
+            <h3 class="category__name">Лицевые панели, почтовые ящики, мусорные клапана</h3>
+            <p class="category__description">
+              Лицевые панели с индивидуальным изготовлением, большой выбор почтовых ящиков, мусорные ковши с увеличенным
+              загрузочным клапаном.
+            </p>
+            <div class="carousel">
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/1.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/1.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/2.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/2.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/3.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/Mini/3.JPG">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/4.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/4.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/5.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/5.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/6.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/6.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/7.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/7.jpg">
+                </a>
+              </div>
+              <div class="carousel__slide">
+                <a data-fancybox="8" data-src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/8.jpg">
+                  <img alt="Лицевые панели почтовые ящики мусорные клапана"
+                    src="./Assets/Photos/Лицевые панели почтовые ящики мусорные клапана/mini/8.jpg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+    <section class="contacts">
+      <div class="contacts__container container">
+        <h2 class="contacts__header">Контакты</h2>
+        <div class="contacts__block">
+          <div class="contacts__column">
+            <i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>
+            <span>Позвонить Нам</span>
+            <a href="tel: +74955320780">+7 (495) 532-07-80</a>
+          </div>
+          <div class="contacts__column">
+            <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+            <span>Написать Нам</span>
+            <a href="mailto: 3017380@gmail.com">3017380@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container container">
+        <span class="footer__logo">ООО «Лидер Групп»</span>
+      </div>
+    </footer>
   </main>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/5256f79c27.js" crossorigin="anonymous"></script>
+  <!-- Fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
