@@ -3,7 +3,7 @@ const carousels = document.querySelectorAll(".carousel");
 carousels.forEach(carousel => {
   new Carousel(carousel, {
     'slidesPerPage' : 1,
-    'preload' : '2',
+    'preload' : '1',
   });
 })
 
