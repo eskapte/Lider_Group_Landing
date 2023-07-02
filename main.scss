@@ -145,19 +145,10 @@ a {
     width: 100%;
     height: min(1080, 84vh);
 
-    background-image: url(/Assets/Images/header-image-compressed.png);
+    background-image: url(/Assets/Images/header-bg-image.jpg);
     background-repeat: no-repeat;
-    background-position-y: -80px;
+    background-position-y: -180px;
     background-position-x: center;
-
-    @media (min-width: 1921px) {
-        background-image: url(/Assets/Images/header-image-big.png);
-    }
-
-    @media (orientation: portrait) {
-        // background-position-x: -400px;
-        background-image: url(/Assets/Images/header-image-mobile.png);
-    }
 
     &__container {
         display: flex;
@@ -344,32 +335,38 @@ a {
 }
 
 .contacts {
+    background-image: url(/Assets/Images/footer-bg-image.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -180px;
+
     &__header {
         @include adaptiv-font(28, 48);
-        color: $text-color-dark;
+        color: $text-color-light;
         text-align: center;
         padding: 0.4em;
 
         @media (orientation: portrait) {
             padding-top: 0.6em;
         }
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
     }
 
     &__block {
-        background-color: white;
         display: flex;
         justify-content: space-around;
         max-width: min(800px, 100%);
-        margin: 3em auto;
+        margin: 0 auto;
+        padding: 3em 0;
 
         @media (orientation: portrait) {
-            margin: 0.5em auto 2em auto;
             flex-direction: column;
             width: 70%;
         }
     }
 
     &__column {
+        cursor: pointer;
         position: relative;
         bottom: 40px;
 
@@ -391,17 +388,14 @@ a {
             border-radius: 50%;
         }
 
-        span, a {
-            color: black;
+        span, a, b {
+            color: $text-color-light;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
             @include adaptiv-font(16, 30)
         }
 
         span {
             padding-top: 0.5em;
-        }
-
-        a {
-            font-weight: bold;
         }
     }
 }
